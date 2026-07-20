@@ -1,0 +1,8 @@
+name = "student-attendance-api"
+main = "server/index_cloudflare.js"
+compatibility_date = "2026-07-09"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "student-db"
+database_id = "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

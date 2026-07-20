@@ -1,0 +1,31 @@
+{
+  "name": "student-attendance-system",
+  "version": "1.0.0",
+  "description": "ระบบเช็คชื่อนักเรียนเข้าแถว (Web Application) แบบครบวงจร",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "setup": "node server/init_db.js",
+    "deploy-backend": "wrangler deploy",
+    "deploy-frontend": "npm run build --prefix client && wrangler pages deploy client/dist"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "hono": "^4.12.28",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.7",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "wrangler": "^4.107.1"
+  }
+}
